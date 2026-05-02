@@ -1,0 +1,38 @@
+{
+  "version": "0.1.1",
+  "release_date": "2026-05-02T14:09:29Z",
+  "release_notes": "# Git Tool 0.1.1\n\n- Improved long file path labels so they keep the first folder and final file\n  name visible, with middle folders shown as space allows and directory\n  prefixes rendered more quietly.\n- Changed the title-bar Settings button to open the Application section by\n  default.\n",
+  "platforms": {
+    "linux-amd64": {
+      "patches": [
+        {
+          "from": "0.1.0",
+          "url": "https://gittoolapp.github.io/git-tool-updates/updates/stable/patches/0.1.0-to-0.1.1-linux-amd64.gittoolpatch",
+          "size": 2239927,
+          "checksum": "sha256:398959fda8cb85955921bd08ad49460479e1a4ca90f2b6abf8d8e29bf8facbe1"
+        }
+      ]
+    },
+    "macos-arm64": {
+      "patches": [
+        {
+          "from": "0.1.0",
+          "url": "https://gittoolapp.github.io/git-tool-updates/updates/stable/patches/0.1.0-to-0.1.1-macos-arm64.gittoolpatch",
+          "size": 1601033,
+          "checksum": "sha256:6235e755dc5f84962bc02fc6ffd60cc492f3e7905327ceeff3634a34906cd588"
+        }
+      ]
+    },
+    "windows-amd64": {
+      "patches": [
+        {
+          "from": "0.1.0",
+          "url": "https://gittoolapp.github.io/git-tool-updates/updates/stable/patches/0.1.0-to-0.1.1-windows-amd64.gittoolpatch",
+          "size": 2592210,
+          "checksum": "sha256:2cb6b806eb002b6ece98ccacee842f6c2b17c009399216a31606beb67f082cbf"
+        }
+      ]
+    }
+  },
+  "mandatory": false
+}
