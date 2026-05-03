@@ -1,35 +1,35 @@
 {
-  "version": "0.1.1",
-  "release_date": "2026-05-02T14:09:29Z",
-  "release_notes": "# Git Tool 0.1.1\n\n- Improved long file path labels so they keep the first folder and final file\n  name visible, with middle folders shown as space allows and directory\n  prefixes rendered more quietly.\n- Changed the title-bar Settings button to open the Application section by\n  default.\n",
+  "version": "0.2.0",
+  "release_date": "2026-05-03T23:37:19Z",
+  "release_notes": "# Git Tool 0.2.0\n\n## Highlights\n\n- Redesigned the Settings experience with clearer navigation, denser account and\n  key management, a stronger AI setup panel, and more focused Repository Access\n  and Environments pages.\n- Expanded branch and commit context menus with copy actions, upstream setup,\n  tag creation, guarded checkout/reset/save-patch actions, guarded commit\n  edit/drop actions, and preview-first AI explanations and rewrite suggestions.\n- Improved merge and conflict resolution with clearer file actions, more\n  reliable applied-state tracking, sturdier `Undo apply` behavior, and safer\n  structural AI resolution flows.\n- Made the commit graph smoother during live resizing and reduced unnecessary\n  graph reloads when repository topology has not changed.\n\n## Settings And Updates\n\n- Made update checks quieter and more persistent in Settings, with always-on\n  background checks and automatic checks when the Application page opens.\n- Added internal update installation: verified downloads can now use **Install\n  and Restart**, which prepares the cached patch/full artifact, launches a\n  copied helper, preserves rollback, and restarts Git Tool without asking the\n  user to manage patch files.\n- Removed the separate Background Checks setting and the pre-download warning\n  from available updates.\n- Tightened the title-bar update badge and refreshed Settings surfaces,\n  disabled states, focus states, account rows, SSH key rows, known-host rows,\n  and public-key previews.\n- Custom AI workflow models now show their saved model name in selectors, with\n  clearer validation and save feedback.\n- Added dedicated AI workflow settings for branch explanations, commit\n  explanations, and commit rewrite previews.\n\n## Repository Workflows\n\n- Detached HEAD now appears as a selected `HEAD` row in LOCAL, with limited\n  actions to create a branch or copy the commit SHA.\n- Added branch upstream selection, explicit lightweight and annotated tag\n  creation, and push-then-create-pull-request from branch actions.\n- Added guarded commit checkout, reset-to-commit, save-patch, edit-message, and\n  drop actions from commit context menus.\n- Added context-menu copy actions for branch names, branch-tip SHAs, commit\n  SHAs, and supported remote commit links.\n- Improved long context menus so they stay inside the app window and scroll only\n  when needed, and restyled context menus and action dialogs to match Settings.\n- Suspended app-level keyboard shortcuts while modals or context menus are open.\n\n## Staging And History\n\n- Made the staging commit message input resizable upward and persisted its\n  height across restarts.\n- Made stage, unstage, and conflict-apply actions update row placement and focus\n  more reliably while working-tree refreshes catch up.\n- Fixed staging and shared file-list path labels so long paths use available\n  row width before truncating middle folders.\n- Rendered commit graph lanes and dots through one virtualized overlay layer,\n  improving resize performance.\n- Kept commit graph ordering stable by avoiding stale branch-tip promotion, and\n  skipped preserve reloads when refs and HEAD are unchanged.\n- Fixed post-commit and post-push graph refreshes so newly created current-branch\n  commits do not stay visually anchored in older history until an app reload.\n\n## Merge And Conflict Resolution\n\n- Fixed merge-complete transitions so the center panel reliably returns to graph\n  mode without toolbar or empty-graph flashes.\n- Kept applied conflict resolutions durable across restart, including staged\n  resolved rows and `Undo apply` from the working tree.\n- Simplified applied conflict state into one resolved-decision model shared by\n  text, delete, structural, and submodule resolutions.\n- Moved applied-resolution controls out of the center conflict card so staged\n  rows are the durable home for undoing an applied resolution.\n- Improved `Undo apply` so restored conflicts regain focus immediately and avoid\n  brief generic conflict-editor flashes.\n- Refined conflict-card headers, inline text-conflict review, structural\n  conflict review, AI Assist summaries, and active-merge warning surfaces.\n- Restored text selection inside conflict review and manual resolution editors\n  while keeping editor chrome non-selectable.\n\n## AI Conflict Resolution\n\n- Improved structural AI results with explicit operations for using existing\n  target files, writing content, deleting originals, or restoring originals.\n- Added safeguards for deletion recommendations so risky or low-confidence\n  structural resolutions route back through review instead of producing empty\n  results.\n- Ranked related-file candidates with backend evidence such as source set,\n  module or namespace overlap, shared symbols, and distinctive text literals.\n- Bounded AI-visible related-file content with outlines and omitted-line markers\n  while keeping full file bodies available in the review UI.\n- Reduced structural-result flashes by preparing related-file comparison\n  workspaces before opening them and by keeping transition states blank during\n  apply and undo refreshes.\n",
   "platforms": {
     "linux-amd64": {
       "patches": [
         {
-          "from": "0.1.0",
-          "url": "https://gittoolapp.github.io/git-tool-updates/updates/stable/patches/0.1.0-to-0.1.1-linux-amd64.gittoolpatch",
-          "size": 2239927,
-          "checksum": "sha256:398959fda8cb85955921bd08ad49460479e1a4ca90f2b6abf8d8e29bf8facbe1"
+          "from": "0.1.1",
+          "url": "https://gittoolapp.github.io/git-tool-updates/updates/stable/patches/0.1.1-to-0.2.0-linux-amd64.gittoolpatch",
+          "size": 5708966,
+          "checksum": "sha256:52ba6867fe4eb1266d84a60265b4abdc7d501bfe31dbbf5b044e377148ff2814"
         }
       ]
     },
     "macos-arm64": {
       "patches": [
         {
-          "from": "0.1.0",
-          "url": "https://gittoolapp.github.io/git-tool-updates/updates/stable/patches/0.1.0-to-0.1.1-macos-arm64.gittoolpatch",
-          "size": 1601033,
-          "checksum": "sha256:6235e755dc5f84962bc02fc6ffd60cc492f3e7905327ceeff3634a34906cd588"
+          "from": "0.1.1",
+          "url": "https://gittoolapp.github.io/git-tool-updates/updates/stable/patches/0.1.1-to-0.2.0-macos-arm64.gittoolpatch",
+          "size": 6196846,
+          "checksum": "sha256:09710ec8f1a68380fecf51b93d5caa5d0ccab576d9b55de310f029a41425bf4e"
         }
       ]
     },
     "windows-amd64": {
       "patches": [
         {
-          "from": "0.1.0",
-          "url": "https://gittoolapp.github.io/git-tool-updates/updates/stable/patches/0.1.0-to-0.1.1-windows-amd64.gittoolpatch",
-          "size": 2592210,
-          "checksum": "sha256:2cb6b806eb002b6ece98ccacee842f6c2b17c009399216a31606beb67f082cbf"
+          "from": "0.1.1",
+          "url": "https://gittoolapp.github.io/git-tool-updates/updates/stable/patches/0.1.1-to-0.2.0-windows-amd64.gittoolpatch",
+          "size": 6105116,
+          "checksum": "sha256:59b3d4005a5712f6e86e96a08c05c7d941cf58f13425b1003a2eb29b129b5409"
         }
       ]
     }
