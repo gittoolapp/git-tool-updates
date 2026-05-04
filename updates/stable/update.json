@@ -1,35 +1,35 @@
 {
-  "version": "0.2.1",
-  "release_date": "2026-05-04T00:07:37Z",
-  "release_notes": "# Git Tool 0.2.1\n\n## AI Settings\n\n- Refreshed the hardcoded AI model selector with the current Codex model lineup:\n  `gpt-5.5`, `gpt-5.4`, `gpt-5.4-mini`, `gpt-5.3-codex`,\n  `gpt-5.3-codex-spark`, and `gpt-5.2`.\n- Refreshed the Claude Code presets with current aliases and active model IDs,\n  including Opus 4.7, Sonnet 4.6, Haiku 4.5, the Haiku 4.5 API alias, and\n  active previous Opus/Sonnet versions.\n- Claude Code aliases such as `opus`, `sonnet`, `haiku`, `best`, `opusplan`,\n  `opus[1m]`, and `sonnet[1m]` are now recognized as Claude-backed models for\n  readiness checks.\n",
+  "version": "0.2.2",
+  "release_date": "2026-05-04T01:17:18Z",
+  "release_notes": "# Git Tool 0.2.2\n\n## UI Polish\n\n- Removed the visible borders from commit graph branch and tag reference chips,\n  made the chips taller, and set the commit graph row height to 30px so row text\n  and lane markers read larger.\n\n## Settings And Updates\n\n- Changed available updates to a single **Install and Restart** action that\n  downloads, verifies, prepares, installs, and restarts internally without\n  exposing a separate patch-download step.\n- Removed patch-file management from the normal Settings flow and clears the\n  cached patch/full artifact from the update cache after the staged install\n  payload is prepared.\n",
   "platforms": {
     "linux-amd64": {
       "patches": [
         {
-          "from": "0.2.0",
-          "url": "https://gittoolapp.github.io/git-tool-updates/updates/stable/patches/0.2.0-to-0.2.1-linux-amd64.gittoolpatch",
-          "size": 4335684,
-          "checksum": "sha256:b82839232f7ef2b8ab4d6e02c256a37080237bbeca76b9fc59730ae95208568a"
+          "from": "0.2.1",
+          "url": "https://gittoolapp.github.io/git-tool-updates/updates/stable/patches/0.2.1-to-0.2.2-linux-amd64.gittoolpatch",
+          "size": 4032440,
+          "checksum": "sha256:b87b4b7ec69198683b47fbc3b738ab9cb47624af90f897eb3ce1475c592916c0"
         }
       ]
     },
     "macos-arm64": {
       "patches": [
         {
-          "from": "0.2.0",
-          "url": "https://gittoolapp.github.io/git-tool-updates/updates/stable/patches/0.2.0-to-0.2.1-macos-arm64.gittoolpatch",
-          "size": 4576604,
-          "checksum": "sha256:00499bd0a4e54924fae995815d9e1e99a3338dd0522608313e7a60507a65c65f"
+          "from": "0.2.1",
+          "url": "https://gittoolapp.github.io/git-tool-updates/updates/stable/patches/0.2.1-to-0.2.2-macos-arm64.gittoolpatch",
+          "size": 4136214,
+          "checksum": "sha256:8804e66142aac323eebeb7f985ab67bc62e76c74e55ec452d7deae0d55259d1f"
         }
       ]
     },
     "windows-amd64": {
       "patches": [
         {
-          "from": "0.2.0",
-          "url": "https://gittoolapp.github.io/git-tool-updates/updates/stable/patches/0.2.0-to-0.2.1-windows-amd64.gittoolpatch",
-          "size": 4888349,
-          "checksum": "sha256:dc8913664349bcd8487504fc201ee5b4a6a82ae71a917a9bdaf552e939cb058d"
+          "from": "0.2.1",
+          "url": "https://gittoolapp.github.io/git-tool-updates/updates/stable/patches/0.2.1-to-0.2.2-windows-amd64.gittoolpatch",
+          "size": 4256460,
+          "checksum": "sha256:313bd0c26bdd2546fb57b55557da1955ca91aa5a8febb73fdf068fc3a8cb3374"
         }
       ]
     }
