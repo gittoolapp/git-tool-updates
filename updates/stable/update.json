@@ -1,35 +1,35 @@
 {
-  "version": "0.2.2",
-  "release_date": "2026-05-04T01:17:18Z",
-  "release_notes": "# Git Tool 0.2.2\n\n## UI Polish\n\n- Removed the visible borders from commit graph branch and tag reference chips,\n  made the chips taller, and set the commit graph row height to 30px so row text\n  and lane markers read larger.\n\n## Settings And Updates\n\n- Changed available updates to a single **Install and Restart** action that\n  downloads, verifies, prepares, installs, and restarts internally without\n  exposing a separate patch-download step.\n- Removed patch-file management from the normal Settings flow and clears the\n  cached patch/full artifact from the update cache after the staged install\n  payload is prepared.\n",
+  "version": "0.2.3",
+  "release_date": "2026-05-04T16:22:46Z",
+  "release_notes": "# Git Tool 0.2.3\n\n## UI Polish\n\n- Removed the visible borders from commit graph branch and tag reference chips,\n  made the chips taller, and set the commit graph row height to 30px so row text\n  and lane markers read larger.\n- Grouped remote branches under collapsible remote-name rows in the sidebar so\n  branch labels no longer repeat prefixes like `origin/`.\n- Added a remote-folder context menu with fetch, manage, open-on-provider, and\n  copy-remote-link actions.\n- Expanded remote branch context menus with existing checkout, create local\n  branch, merge, fetch, AI explain, copy name/SHA, and remote commit-link\n  actions.\n- Let branch ahead/behind badges expand for larger counts instead of clipping\n  inside the sidebar row.\n- Replaced the commit-message AI sparkle glyph with a clearer icon treatment\n  and added inline feedback when commit or AI setup blocks the action.\n- Centered AI provider initials and workflow numbers inside their circular\n  Settings marks.\n\n## Settings And Updates\n\n- Changed available updates to a single **Install and Restart** action that\n  downloads, verifies, prepares, installs, and restarts internally without\n  exposing a separate patch-download step.\n- Removed patch-file management from the normal Settings flow and clears the\n  cached patch/full artifact from the update cache after the staged install\n  payload is prepared.\n\n## AI And Repository Workflows\n\n- Added Gemini CLI as a supported AI provider alongside Codex and Claude.\n- Updated Gemini presets to include the current Gemini 3 text models while\n  keeping Gemini 2.5 options as stable fallbacks.\n- Empty AI workflow model settings now default to a model compatible with an\n  installed supported CLI before falling back to the built-in Codex default.\n- Added a labeled **Fetch** action to the main repository toolbar.\n- Added a RepoSwitcher remove action for clearing repositories from the current\n  environment's recent list.\n- GitHub PR readiness no longer clears a connected token when GitHub returns a\n  repository permission, scope, or organization SSO `403`; it keeps the token\n  and shows permission guidance instead.\n- Removed the duplicate pull request readiness message from the Details footer;\n  the Target card remains the single visible status location.\n- Repository Access now treats provider-backed pull request features as optional\n  readiness, so GitLab, Bitbucket, and basic Git usage can be ready without\n  GitHub API access.\n",
   "platforms": {
     "linux-amd64": {
       "patches": [
         {
-          "from": "0.2.1",
-          "url": "https://gittoolapp.github.io/git-tool-updates/updates/stable/patches/0.2.1-to-0.2.2-linux-amd64.gittoolpatch",
-          "size": 4032440,
-          "checksum": "sha256:b87b4b7ec69198683b47fbc3b738ab9cb47624af90f897eb3ce1475c592916c0"
+          "from": "0.2.2",
+          "url": "https://gittoolapp.github.io/git-tool-updates/updates/stable/patches/0.2.2-to-0.2.3-linux-amd64.gittoolpatch",
+          "size": 5281505,
+          "checksum": "sha256:e105014c3a63a15026f962193178843cba71327bb2addea839b5ab67b6343de9"
         }
       ]
     },
     "macos-arm64": {
       "patches": [
         {
-          "from": "0.2.1",
-          "url": "https://gittoolapp.github.io/git-tool-updates/updates/stable/patches/0.2.1-to-0.2.2-macos-arm64.gittoolpatch",
-          "size": 4136214,
-          "checksum": "sha256:8804e66142aac323eebeb7f985ab67bc62e76c74e55ec452d7deae0d55259d1f"
+          "from": "0.2.2",
+          "url": "https://gittoolapp.github.io/git-tool-updates/updates/stable/patches/0.2.2-to-0.2.3-macos-arm64.gittoolpatch",
+          "size": 5823485,
+          "checksum": "sha256:b433ae7532c405e5460fea38edf4b6558d472cd6c55a320660033ff22369fd17"
         }
       ]
     },
     "windows-amd64": {
       "patches": [
         {
-          "from": "0.2.1",
-          "url": "https://gittoolapp.github.io/git-tool-updates/updates/stable/patches/0.2.1-to-0.2.2-windows-amd64.gittoolpatch",
-          "size": 4256460,
-          "checksum": "sha256:313bd0c26bdd2546fb57b55557da1955ca91aa5a8febb73fdf068fc3a8cb3374"
+          "from": "0.2.2",
+          "url": "https://gittoolapp.github.io/git-tool-updates/updates/stable/patches/0.2.2-to-0.2.3-windows-amd64.gittoolpatch",
+          "size": 5566669,
+          "checksum": "sha256:89102e96ac05dc06028b2b6fc9c29f35a9a131620e505b349d848942c15f62f4"
         }
       ]
     }
