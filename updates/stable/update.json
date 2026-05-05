@@ -1,35 +1,15 @@
 {
-  "version": "0.2.3",
-  "release_date": "2026-05-04T16:22:46Z",
-  "release_notes": "# Git Tool 0.2.3\n\n## UI Polish\n\n- Removed the visible borders from commit graph branch and tag reference chips,\n  made the chips taller, and set the commit graph row height to 30px so row text\n  and lane markers read larger.\n- Grouped remote branches under collapsible remote-name rows in the sidebar so\n  branch labels no longer repeat prefixes like `origin/`.\n- Added a remote-folder context menu with fetch, manage, open-on-provider, and\n  copy-remote-link actions.\n- Expanded remote branch context menus with existing checkout, create local\n  branch, merge, fetch, AI explain, copy name/SHA, and remote commit-link\n  actions.\n- Let branch ahead/behind badges expand for larger counts instead of clipping\n  inside the sidebar row.\n- Replaced the commit-message AI sparkle glyph with a clearer icon treatment\n  and added inline feedback when commit or AI setup blocks the action.\n- Added a close action to the Commit Detail panel header so users can return\n  directly to the Working Tree panel.\n- Refreshed the sidebar tag list after creating tags from commit history, so\n  new tag chips in the graph also appear in the TAGS section.\n- Centered AI provider initials and workflow numbers inside their circular\n  Settings marks.\n\n## Settings And Updates\n\n- Changed available updates to a single **Install and Restart** action that\n  downloads, verifies, prepares, installs, and restarts internally without\n  exposing a separate patch-download step.\n- Removed patch-file management from the normal Settings flow and clears the\n  cached patch/full artifact from the update cache after the staged install\n  payload is prepared.\n- Fixed release patch generation so the default app-managed update path fails\n  during packaging if `bsdiff` is missing instead of publishing an unsupported\n  `xdelta3` patch.\n\n## AI And Repository Workflows\n\n- Added Gemini CLI as a supported AI provider alongside Codex and Claude.\n- Updated Gemini presets to include the current Gemini 3 text models while\n  keeping Gemini 2.5 options as stable fallbacks.\n- Empty AI workflow model settings now default to a model compatible with an\n  installed supported CLI before falling back to the built-in Codex default.\n- Added a labeled **Fetch** action to the main repository toolbar.\n- Fetching a repository no longer reports a refresh failure when a sidebar\n  section is not ready to reload after the Git fetch completes.\n- Added a RepoSwitcher remove action for clearing repositories from the current\n  environment's recent list.\n- GitHub PR readiness no longer clears a connected token when GitHub returns a\n  repository permission, scope, or organization SSO `403`; it keeps the token\n  and shows permission guidance instead.\n- Removed the duplicate pull request readiness message from the Details footer;\n  the Target card remains the single visible status location.\n- Repository Access now treats provider-backed pull request features as optional\n  readiness, so GitLab, Bitbucket, and basic Git usage can be ready without\n  GitHub API access.\n",
+  "version": "0.2.5",
+  "release_date": "2026-05-05T23:19:26Z",
+  "release_notes": "# Git Tool 0.2.5\n\n## Branch Workflows\n\n- Added `Rebase current branch onto this...` to the local branch context menu\n  so the checked-out branch can be rebased onto another local branch without\n  leaving the sidebar workflow.\n- Added `Force Push with Lease...` to the local branch context menu so\n  intentionally rebased or amended branch history can be published without\n  leaving the app's guarded branch workflow.\n- Reorganized local branch context menu remote actions into smaller sync,\n  publish, and pull-request groups so rebasing-related actions are easier to\n  scan.\n- Sidebar branch dialogs now dismiss on `Escape`, including force-push,\n  upstream selection, rebase confirmation, and AI branch explanation modals.\n- Simplified the force-push and rebase confirmation dialog headers by removing\n  the redundant branch label from the top-right corner.\n- Rebases that stop for conflicts now reuse the existing conflict workspace,\n  abort flow, and working-tree completion guardrails, including continue/abort\n  support through the normal operation UI.\n- When a rebase is ready to proceed, the staging panel now offers\n  `Continue rebase` directly instead of forcing a manual commit message path.\n- Text selection highlights now stay visible in conflict editors even when the\n  selected text crosses tinted conflict-zone lines.\n- Cmd/Ctrl+F now opens Monaco search for the active file or diff inspector,\n  even when focus is on the inspector chrome instead of the editor text.\n- Working-tree Monaco diffs now show per-hunk actions in the hunk header:\n  unstaged hunks can be discarded or staged, and staged hunks can be unstaged\n  back out of the index without touching the working-tree edit.\n- Added/deleted file hunk actions now emit Git file-mode patch headers so\n  staging a newly-created file hunk does not try to stage a bogus `dev/null`\n  path.\n\n## Reliability\n\n- Guarded merge completion through the normal Commit button so resolved files\n  that were edited again must be staged or discarded before the merge commit is\n  created, preventing those edits from being left behind as surprise unstaged\n  changes.\n- Reverting a merge commit now uses the first parent as the mainline, matching\n  the app's current-branch history view and undoing the merged-in changes\n  instead of surfacing Git's raw `no -m option was given` failure.\n",
   "platforms": {
-    "linux-amd64": {
-      "patches": [
-        {
-          "from": "0.2.2",
-          "url": "https://gittoolapp.github.io/git-tool-updates/updates/stable/patches/0.2.2-to-0.2.3-linux-amd64.gittoolpatch",
-          "size": 5281505,
-          "checksum": "sha256:e105014c3a63a15026f962193178843cba71327bb2addea839b5ab67b6343de9"
-        }
-      ]
-    },
     "macos-arm64": {
       "patches": [
         {
-          "from": "0.2.2",
-          "url": "https://gittoolapp.github.io/git-tool-updates/updates/stable/patches/0.2.2-to-0.2.3-macos-arm64.gittoolpatch",
-          "size": 4707594,
-          "checksum": "sha256:761ba6f95507f9a674dde86c337d91860a12e033c1b35f012abf9fbc928a0194"
-        }
-      ]
-    },
-    "windows-amd64": {
-      "patches": [
-        {
-          "from": "0.2.2",
-          "url": "https://gittoolapp.github.io/git-tool-updates/updates/stable/patches/0.2.2-to-0.2.3-windows-amd64.gittoolpatch",
-          "size": 5566669,
-          "checksum": "sha256:89102e96ac05dc06028b2b6fc9c29f35a9a131620e505b349d848942c15f62f4"
+          "from": "0.2.3",
+          "url": "https://gittoolapp.github.io/git-tool-updates/updates/stable/patches/0.2.3-to-0.2.5-macos-arm64.gittoolpatch",
+          "size": 4972924,
+          "checksum": "sha256:04c5233169565b7e7ebb5aa84f71f317c9ab08d7ba45c89719d5b4bf0fb6229d"
         }
       ]
     }
