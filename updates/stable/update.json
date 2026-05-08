@@ -1,6 +1,6 @@
 {
   "version": "0.2.8",
-  "release_date": "2026-05-08T14:43:26Z",
+  "release_date": "2026-05-08T15:06:51Z",
   "release_notes": "# Git Tool 0.2.8\n\n## Packaging\n\n- Added the Git Tool app icon to packaged builds and named the macOS bundle\n  `Git Tool.app`.\n\n## Fixes And Reliability\n\n- Moved the repository switcher, environment switcher, and error center popovers\n  onto the shared fixed floating layer, so dropdown content no longer renders\n  underneath sidebar filters, branch rows, or other panel content on affected\n  systems.\n- Kept the repository switcher dropdown aligned with the sidebar edge and made\n  repository/environment search fields focus reliably when their dropdowns open.\n- Marked shared floating popovers as non-draggable Wails UI so portaled\n  dropdown search fields can receive focus in the desktop window.\n- Fixed macOS in-app updates across the bundle rename from `git-tool.app` to\n  `Git Tool.app`, so the helper backs up the old bundle, installs the renamed\n  bundle, and relaunches the updated app instead of leaving two apps side by\n  side.\n- Stash pop/apply conflicts now open the conflict workspace instead of leaving\n  the app in normal history mode with conflicted files in the working tree.\n",
   "platforms": {
     "macos-arm64": {
@@ -8,8 +8,8 @@
         {
           "from": "0.2.7",
           "url": "https://gittoolapp.github.io/git-tool-updates/updates/stable/patches/0.2.7-to-0.2.8-macos-arm64.gittoolpatch",
-          "size": 2720490,
-          "checksum": "sha256:93b8e3b28f0ade36c05c9a4c1a86b396fe62e42f8b23f1613c83c539257648a6"
+          "size": 5291221,
+          "checksum": "sha256:647874cac1c4b39d55e1cea673c5a7f5b52b1a09bfa36d10dbd4c0e440b18a4f"
         }
       ]
     }
